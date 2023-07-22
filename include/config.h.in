@@ -1,0 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// the configured options and settings for fexpr
+#define FEXPR_VERSION_MAJOR @fexpr_VERSION_MAJOR@
+#define FEXPR_VERSION_MINOR @fexpr_VERSION_MINOR@
+#define FEXPR_VERSION @fexpr_VERSION_MAJOR@.@fexpr_VERSION_MINOR@ 

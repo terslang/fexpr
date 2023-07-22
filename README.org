@@ -1,0 +1,28 @@
+#+title: fexpr
+#+author: Shriram
+#+date: <2023-07-22 Sat>
+
+fexpr: expr with multiprecision floating point support
+
+* Usage
+
+Use fexpr just like you would expr
+
+#+BEGIN_EXAMPLE
+$ fexpr 365 / 7 + 11 \* 2
+#+END_EXAMPLE
+
+** Requirements
+- cmake
+- g++ or clang which supports c++20
+
+** Building
+clone the repository and build
+#+BEGIN_EXAMPLE
+$ git clone  
+$ cd fexpr
+$ cmake -Bbuild
+$ cmake ..
+$ make
+#+END_EXAMPLE
+

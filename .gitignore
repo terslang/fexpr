@@ -1,0 +1,6 @@
+# emacs temp files
+\#*\#
+.\#*
+
+# build files
+build/
