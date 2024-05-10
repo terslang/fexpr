@@ -20,6 +20,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+# Use GNU Install Dirs
+include(GNUInstallDirs)
+
 add_executable(${PROJECT_NAME} src/main.cpp src/ast.cpp src/parse.cpp src/eval_visitor.cpp)
 
 # include directories (must be after add_executable)
@@ -27,3 +30,6 @@ target_include_directories(${PROJECT_NAME} PUBLIC
     "${PROJECT_BINARY_DIR}/include"
     "${PROJECT_SOURCE_DIR}/include"
 )
+
+install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+
