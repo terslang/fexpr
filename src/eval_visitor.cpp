@@ -23,7 +23,7 @@ void EvalVisitor::visit(OperatorNode *node) {
   node->left->accept(left_visitor);
   node->right->accept(right_visitor);
 
-  double left_operand, right_operand;
+  long double left_operand, right_operand;
   std::regex right_regex;
   if (node->op == ":") {
     try {
@@ -34,8 +34,8 @@ void EvalVisitor::visit(OperatorNode *node) {
     }
   } else {
     try {
-      left_operand = std::stod(left_visitor.result);
-      right_operand = std::stod(right_visitor.result);
+      left_operand = std::stold(left_visitor.result);
+      right_operand = std::stold(right_visitor.result);
     } catch (const std::invalid_argument &e) {
       std::cerr << "Invalid argument(s) provided\n";
       return;
