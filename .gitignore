@@ -4,3 +4,6 @@
 
 # build files
 build/
+
+# cache files
+.cache/
